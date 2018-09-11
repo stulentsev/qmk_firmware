@@ -21,8 +21,7 @@ enum custom_keycodes {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-
-  [0] = LAYOUT_ergodox(KC_EQUAL,KC_1,KC_2,KC_3,KC_4,KC_5,KC_LEFT,
+  [0] = LAYOUT_ergodox(KC_ESCAPE,KC_1,KC_2,KC_3,KC_4,KC_5,KC_LEFT,
                KC_TAB, KC_Q,KC_W,KC_D,KC_F,KC_K,MO(1),
                KC_BSPACE,KC_A,KC_S,KC_E,KC_T,KC_G,
                SFT_T(KC_NO),CTL_T(KC_Z),KC_X,KC_C,KC_V,KC_B,ALL_T(KC_NO),
@@ -38,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                MEH_T(KC_NO),KC_P,KC_M,KC_COMMA,KC_DOT,RCTL_T(KC_SLASH),SFT_T(KC_NO),
                KC_UP,KC_DOWN,KC_LBRACKET,KC_RBRACKET,MO(1),
 
-               RGUI_T(KC_NO),CTL_T(KC_ESCAPE),
+               RGUI_T(KC_NO),KC_EQUAL,
                KC_PGUP,
                KC_PGDOWN,KC_DELETE,KC_SPACE),
 
