@@ -3,9 +3,7 @@
 #include "action_layer.h"
 #include "version.h"
 
-
-#include "keymap_german.h"
-#include "keymap_nordic.h"
+#include "stulentsev.h"
 
 #define RGBLIGHT_COLOR_LAYER_0 0x64, 0x95, 0xED
 #define RGBLIGHT_COLOR_LAYER_1 0xFF, 0x00, 0x00
@@ -70,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
                KC_TRNS,KC_TRNS,KC_TRNS,KC_MS_BTN1,KC_MS_BTN2,
 
-                                                   KC_TRNS,TG(3),
+                                                   TG(4),TG(3),
                                                            KC_TRNS,
                                            KC_TRNS,KC_TRNS,KC_TRNS,
 
@@ -96,6 +94,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                           KC_SPACE,KC_MS_BTN5,KC_TRNS,
 
                KC_NUMLOCK,KC_KP_6,KC_KP_7,KC_KP_8,KC_KP_9,KC_KP_0,KC_TRNS,
+               KC_TRNS,KC_Y,KC_U,KC_I,KC_O,KC_P,KC_TRNS,
+               KC_H,KC_J,KC_K,KC_L,KC_SCOLON,KC_TRNS,
+               KC_TRNS,KC_N,KC_M,KC_KP_COMMA,KC_DOT,KC_SLASH,RSFT_T(KC_NO),
+                                   KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
+
+               TO(0),KC_TRNS,
+               KC_TRNS,
+               KC_TRNS,KC_TRNS,KC_ENTER),
+
+  [4] = LAYOUT_ergodox(
+               KC_ESCAPE,KC_1,KC_2,KC_3,KC_4,KC_5,KC_TRNS,
+               KC_TRNS,KC_Q,KC_W,KC_E,KC_R,KC_T,KC_TRNS,
+               KC_TRNS,KC_A,KC_S,KC_D,KC_F,KC_G,
+               KC_LSHIFT,KC_Z,KC_X,KC_C,KC_V,KC_B,KC_ENTER,
+               KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
+
+                                      KC_TRNS,KC_TRNS,
+                                              KC_TRNS,
+                          KC_SPACE,KC_MS_BTN5,KC_TRNS,
+
+               KC_NUMLOCK,KC_D3_1,KC_D3_2,KC_D3_3,KC_D3_4,KC_KP_0,KC_TRNS,
                KC_TRNS,KC_Y,KC_U,KC_I,KC_O,KC_P,KC_TRNS,
                KC_H,KC_J,KC_K,KC_L,KC_SCOLON,KC_TRNS,
                KC_TRNS,KC_N,KC_M,KC_KP_COMMA,KC_DOT,KC_SLASH,RSFT_T(KC_NO),
@@ -135,6 +154,9 @@ void matrix_init_user(void) {
 // Runs constantly in the background, in a loop.
 void matrix_scan_user(void) {
   // IMPORTANT: don't put slow code in here, as it will be run many times a second.
+  #ifdef TAP_DANCE_ENABLE  // Run Diablo 3 macro checking code.
+    run_diablo_macro_check();
+  #endif // TAP_DANCE_ENABLE
 };
 
 
@@ -198,8 +220,6 @@ uint32_t layer_state_set_user(uint32_t state) {
         #endif
         break;
       case 4:
-        // ergodox_right_led_1_on();
-        // ergodox_right_led_2_on();
         #ifdef RGBLIGHT_COLOR_LAYER_4
           rgblight_setrgb(RGBLIGHT_COLOR_LAYER_4);
         #endif
