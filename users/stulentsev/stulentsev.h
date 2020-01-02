@@ -5,6 +5,14 @@
     #include "tap_dances.h"
 #endif
 
+/* Define layer names */
+enum userspace_layers {
+    _NORMAN = 0,
+    _FUNCTIONS_AND_PUNCTUATION,
+    _MOUSE_AND_CURSOR_MOVEMENT,
+    _QWERTY,
+    _DIABLO,
+};
 
 #include "quantum.h"
 

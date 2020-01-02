@@ -21,19 +21,19 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_ergodox(
                KC_ESCAPE,KC_1,KC_2,KC_3,KC_4,KC_5,KC_LEFT,
-               KC_TAB, KC_Q,KC_W,KC_D,KC_F,KC_K,MO(1),
-               KC_BSPACE,LT(2,KC_A),KC_S,KC_E,KC_T,KC_G,
+               KC_TAB, KC_Q,KC_W,KC_E,KC_R,KC_T,MO(1),
+               KC_BSPACE,LT(2,KC_A),KC_S,KC_D,KC_F,KC_G,
                SFT_T(KC_NO),CTL_T(KC_Z),KC_X,KC_C,KC_V,KC_B,ALL_T(KC_NO),
-               LT(1,KC_GRAVE),KC_QUOTE,LALT(KC_LSHIFT),KC_LALT,KC_LCTL,
+               KC_GRAVE,KC_QUOTE,LALT(KC_LSHIFT),KC_LALT,KC_LCTL,
 
                                              ALT_T(KC_APPLICATION),KC_LGUI,
                                                                    KC_HOME,
                                                 KC_ENTER,KC_BSPACE,KC_END,
 
                KC_RIGHT,KC_6,KC_7,KC_8,KC_9,KC_0,KC_MINUS,
-               MO(1),KC_J,KC_U,KC_R,KC_L,KC_SCOLON,KC_BSLASH,
-                     KC_Y,KC_N,KC_I,KC_O,LT(2,KC_H),KC_QUOTE,
-               MEH_T(KC_NO),KC_P,KC_M,KC_COMMA,KC_DOT,RCTL_T(KC_SLASH),SFT_T(KC_NO),
+               MO(1),KC_Y,KC_U,KC_I,KC_O,KC_P,KC_BSLASH,
+                     KC_H,KC_J,KC_K,KC_L,LT(2,KC_COLON),KC_QUOTE,
+               MEH_T(KC_NO),KC_N,KC_M,KC_COMMA,KC_DOT,RCTL_T(KC_SLASH),SFT_T(KC_NO),
                                          KC_UP,KC_DOWN,KC_LBRACKET,KC_RBRACKET,MO(1),
 
                RGUI_T(KC_NO),KC_EQUAL,
@@ -87,9 +87,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                KC_TRNS,KC_Q,KC_W,KC_E,KC_R,KC_T,KC_TRNS,
                KC_TRNS,KC_A,KC_S,KC_D,KC_F,KC_G,
                KC_LSHIFT,KC_Z,KC_X,KC_C,KC_V,KC_B,KC_ENTER,
-               KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
+               KC_GRAVE,KC_TRNS,KC_TRNS,KC_LALT,KC_LCTRL,
 
-                                      KC_TRNS,KC_TRNS,
+                                      KC_SPACE,KC_TRNS,
                                               KC_TRNS,
                           KC_SPACE,KC_MS_BTN5,KC_TRNS,
 
@@ -108,9 +108,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                KC_TRNS,KC_Q,KC_W,KC_E,KC_R,KC_T,KC_TRNS,
                KC_TRNS,KC_A,KC_S,KC_D,KC_F,KC_G,
                KC_LSHIFT,KC_Z,KC_X,KC_C,KC_V,KC_B,KC_ENTER,
-               KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
+               KC_GRAVE,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
 
-                                      KC_TRNS,KC_TRNS,
+                                      KC_SPACE,KC_TRNS,
                                               KC_TRNS,
                           KC_SPACE,KC_MS_BTN5,KC_TRNS,
 
